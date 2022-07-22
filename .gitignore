@@ -1,0 +1,7 @@
+venv/*
+*.log
+*test.py
+*.pyc
+*.ini
+*driver
+
