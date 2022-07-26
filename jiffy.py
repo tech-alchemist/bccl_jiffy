@@ -7,7 +7,7 @@ from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
-import time, pickle, configparser, sys
+import time, pickle, configparser, sys , base64
 
 # Check Argument #
 try:
@@ -23,8 +23,11 @@ cp.read('config.ini')
 
 link = (cp["jiffy"]["link"])
 user = (cp["jiffy"]["user"])
-pswd = (cp["jiffy"]["pass"])
-# print(link, user)
+bpwd = (cp["jiffy"]["pass"])
+b641 = bpwd.encode("ascii")
+b642 = base64.b64decode(b641)
+pswd = b642.decode("ascii")
+#print(link, user , pswd)
 
 s=Service(ChromeDriverManager().install())
 driver = webdriver.Chrome(service=s)

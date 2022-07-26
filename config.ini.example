@@ -1,5 +1,11 @@
+# This is Sample Config File. 
+# Copy this as config.ini , Add Timescape Infra UserID & Base64 Encoded Infra Password
+# To encode Base64 password visit : https://www.base64encoder.io/
+# Do not Touch the Login Link, 
+
 [jiffy]
 link=https://jiffy.timesgroup.com/timescape/jiffy/#/webtimestamp
-# TimeScape Credentials Here ##
+# Enter Infra ID & Base64 Encoded Infra Password Below
 user=InfraEmailID@example.com
-pass=
+pass=Encoded_Password_Here
+
