@@ -6,6 +6,10 @@
 [jiffy]
 link=https://jiffy.timesgroup.com/timescape/jiffy/#/webtimestamp
 # Enter Infra ID & Base64 Encoded Infra Password Below
-user=InfraEmailID@example.com
+mail=InfraEmailID@example.com
 pass=Encoded_Password_Here
 
+# Get Telegram BotID from botfather & Telegram ChatID from https://stackoverflow.com/a/49852274
+[telegram]
+Bot_tkn=XXXXX:YYYYYYYY
+Chat_ID=-CHATIDHERE
