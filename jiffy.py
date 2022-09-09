@@ -86,12 +86,12 @@ if trgr == "in":
         btn = driver.find_element('xpath', '//*[@class ="btn btn-left activeSwipe"]')
         btn.click()
         driver.implicitly_wait(5)
-        msg="[Marked Check In] "+user
+        msg="[🟢 ⬇️ IN]"+user
         tmsg=timer(msg)
         print(tmsg)
         PostTG(tgtkn, tgcid, tmsg)
     except:
-        msg="[Skipped Check In] "+user
+        msg="[🔴 ⬇️ IN] "+user
         tmsg=timer(msg)
         print(tmsg)
         PostTG(tgtkn, tgcid, tmsg)
@@ -99,15 +99,15 @@ if trgr == "in":
 elif trgr == "out":
     # Or CheckOut #
     try:
-        btn = driver.find_element('xpath', '//*[@class ="btn btn-left activeSwipe"]')
+        btn = driver.find_element('xpath', '//*[@class ="btn btn-right activeSwipe"]')
         btn.click()
         driver.implicitly_wait(5)
-        msg="[Marked Check Out] "+user
+        msg="[🟢 ⬆️ OUT]"+user
         tmsg=timer(msg)
         print(tmsg)
         PostTG(tgtkn, tgcid, tmsg)
     except:
-        msg="[Skipped Check Out] "+user
+        msg="[🔴 ⬆️ OUT]"+user
         tmsg= timer(msg)
         print(tmsg)
         PostTG(tgtkn, tgcid, tmsg)
