@@ -50,7 +50,7 @@ driver.maximize_window()
 def timer(msg):
     IST = pytz.timezone('Asia/Kolkata')
     dist = datetime.now(IST)
-    return(dist.strftime("[Jiffy] %a %e%b%Y @ %l:%M:%S %p "+msg))
+    return(dist.strftime("[Jiffy] "+msg+" %a %e%b%Y %l:%M:%S%p"))
 
 def PostTG(tkn,cid,msg):
     requests.packages.urllib3.disable_warnings()
@@ -86,12 +86,12 @@ if trgr == "in":
         btn = driver.find_element('xpath', '//*[@class ="btn btn-left activeSwipe"]')
         btn.click()
         driver.implicitly_wait(5)
-        msg="[🟢 ⬇️ IN]"+user
+        msg="[🟢 ⬇️ IN]"
         tmsg=timer(msg)
         print(tmsg)
         PostTG(tgtkn, tgcid, tmsg)
     except:
-        msg="[🔴 ⬇️ IN] "+user
+        msg="[🔴 ⬇️ IN] "
         tmsg=timer(msg)
         print(tmsg)
         PostTG(tgtkn, tgcid, tmsg)
@@ -102,12 +102,12 @@ elif trgr == "out":
         btn = driver.find_element('xpath', '//*[@class ="btn btn-right activeSwipe"]')
         btn.click()
         driver.implicitly_wait(5)
-        msg="[🟢 ⬆️ OUT]"+user
+        msg="[🟢 ⬆️ OUT]"
         tmsg=timer(msg)
         print(tmsg)
         PostTG(tgtkn, tgcid, tmsg)
     except:
-        msg="[🔴 ⬆️ OUT]"+user
+        msg="[🔴 ⬆️ OUT]"
         tmsg= timer(msg)
         print(tmsg)
         PostTG(tgtkn, tgcid, tmsg)
